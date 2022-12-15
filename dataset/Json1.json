@@ -1,0 +1,38 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobjson",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "iris.json",
+				"container": "raw2"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"sepalLength": {
+					"type": "number"
+				},
+				"sepalWidth": {
+					"type": "number"
+				},
+				"petalLength": {
+					"type": "number"
+				},
+				"petalWidth": {
+					"type": "number"
+				},
+				"species": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
