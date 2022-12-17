@@ -1,0 +1,39 @@
+RESOURCES CREATED/TOOLS USED:
+
+A Resource Group
+Azure Blob Storage
+Azure Data Factory
+Databricks
+Tableau
+
+
+DUE STEPS TAKEN:
+
+1. A  resource group was first created to hold all necessary resources that is needed to achieve this process.
+
+2. Azure Blob Storage was created having two containers. The data was imported into one container in its raw format(JSON).
+
+3. Azure Data Factory was created to integrate the dataset from the first blob storage container to the second blob storage container.
+
+4. On the Azure Data Factory, a pipeline was created alongside a copy activity for the integration processes as well as a linked services on an autoresolve integrated runtime on the data factory studio.
+
+5. The data was moved into the second container converting it from JSON format to a CSV format.
+
+6. The pipeline was then triggered, validated and published on the data factory studio after which all actions reflected on the GitHub repository created for the project. 
+
+7. Databricks community edition account was created. A cluster was created on it together with a notebook choosing python as the programming language. 
+
+8. The blob storage was mounted on databricks using the code template on the notebook as shown below
+
+dbutils.fs.mount(
+	source = "wasbs://sourcedatacontainername@blobstorageaccountid.blob.core.windows.net",
+	mount_point = "/mnt/preferredstorageaccountcontainername",
+	extra_configs = {"fs.azure.account.key.blobstorageaccountid.blob.core.windows.net":"storageaccountaccesskey"})
+
+9. The mounted file path was confirmed using the code below:
+
+%fs ls /mnt/target1
+
+10. The necessary pyspark codes implemented for data transformation and cleaning are as shown below:
+
+11. The dataset was then visualized and published on tableau public.
