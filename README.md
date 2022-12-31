@@ -4,7 +4,8 @@
 This is a data engineering project that involves moving data in a format(JSON) from one Azure Blob Storage container to a second container in another format(CSV) and finally mounting on Databricks with relevant data transformations using pyspark. Below is the data architecture
 
 
-![Pyspark Project](https://user-images.githubusercontent.com/112668327/208252361-c615c1ab-8c18-4af0-b2b2-ac3f2ca954f6.png)
+![Data Architecture Photo](https://user-images.githubusercontent.com/112668327/210150282-49af0c41-3ffd-430b-ad61-deeedac3744f.png)
+
 
 
 The steps implemented for the project was documented in the 'Uploaded' file which can be accessed from this repository.
